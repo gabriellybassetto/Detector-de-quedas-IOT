@@ -1,0 +1,44 @@
+Informações do Pré-Projeto: Sistema IoT de Detecção de Queda para Idosos
+Autora: Gabrielly Bassetto
+
+Objetivo: Desenvolver um sistema IoT para detecção de quedas em idosos e pacientes em recuperação.
+
+Hardware:
+- Placa: BitDogLab (RP2040)
+- Sensor: Acelerômetro (para detecção de movimento e quedas bruscas)
+- Atuadores: Display OLED ou LED indicador, Buzzer (alerta sonoro local)
+- Sensor Adicional: Oxigenação/batimento (opcional)
+- Comunicação: Módulo Wi-Fi / Bluetooth (para envio via MQTT)
+
+Software:
+- Linguagem: C/C++
+- Sistema Operacional: FreeRTOS
+- Tarefas (Tasks):
+  1. Leitura de sensores
+  2. Processamento / Detecção de queda
+  3. Comunicação IoT (MQTT)
+
+Protocolos:
+- MQTT para notificações remotas
+- HTTP (mencionado no diagrama/cronograma)
+- Wi-Fi/Bluetooth para transmissão
+
+Fluxo:
+Sensor -> BitDogLab (Processamento) -> Wi-Fi -> Servidor/Dashboard -> Alerta Local (LED/Buzzer)
+
+Especificações Técnicas BitDogLab (RP2040):
+- Microcontrolador: Raspberry Pi Pico W (RP2040 com Wi-Fi)
+- I2C0 (Sensores): SDA=0, SCL=1 (Padrão para sensores externos/acelerômetro se conectado no I2C0)
+- I2C1 (Display OLED): SDA=14, SCL=15
+- Buzzer A: GPIO 21
+- Buzzer B: GPIO 10
+- Botão A: GPIO 5
+- Botão B: GPIO 6
+- LED RGB: GPIO 11 (R), 12 (G), 13 (B) - Nota: play_audio.c menciona LED=12 (Verde)
+- Acelerômetro: MPU6050 (comum no kit)
+- Matriz de LEDs (Neopixel): GPIO 7
+
+Arquitetura de Software:
+- SDK: Raspberry Pi Pico C/C++ SDK
+- RTOS: FreeRTOS
+- MQTT: lwIP + paho-mqtt ou similar integrado ao SDK do Pico W
