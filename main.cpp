@@ -1,8 +1,4 @@
-/**
- * Projeto: Sistema IoT de Detecção de Queda para Idosos
- * Placa: BitDogLab (RP2040 / Pico W)
- * Linguagem: C++ com FreeRTOS
- */
+/* Projeto: Sistema IoT de Detecção de Queda para Idosos */
 
 #include <stdio.h>
 #include <math.h>
