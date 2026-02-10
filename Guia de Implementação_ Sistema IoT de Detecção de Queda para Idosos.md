@@ -1,6 +1,5 @@
 # Guia de Implementação: Sistema IoT de Detecção de Queda para Idosos
 
-**Autora:** Manus AI
 
 Este guia detalhado oferece um roteiro completo para a implementação de um sistema IoT de detecção de queda, utilizando a placa **BitDogLab** baseada no microcontrolador Raspberry Pi Pico W. O objetivo é fornecer uma solução acessível e confiável para monitorar idosos e pacientes em recuperação, alertando cuidadores em caso de incidentes.
 
